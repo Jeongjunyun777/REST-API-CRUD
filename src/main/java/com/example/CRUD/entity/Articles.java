@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Value;
 @NoArgsConstructor
 @Builder
 @Table(name = "article")
+
 public class Articles {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
