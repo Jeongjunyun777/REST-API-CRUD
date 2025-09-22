@@ -16,7 +16,7 @@ public class ArticlesController {
 
     private final ArticlesServiceImpl articlesServiceImpl;
 
-    @PostMapping("/")
+    @PostMapping
     public ResponseEntity<ArticlesResponseDto> createArticle(@RequestBody ArticlesRequestDto articlesRequestDto) {
         ArticlesResponseDto articlesResponseDto = articlesServiceImpl.Createarticles(articlesRequestDto);
         return ResponseEntity.status(201).body(articlesResponseDto);
