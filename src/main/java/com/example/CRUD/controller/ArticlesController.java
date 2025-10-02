@@ -22,9 +22,9 @@ public class ArticlesController {
         return ResponseEntity.status(201).body(articlesResponseDto);
     }
     @GetMapping
-    public ResponseEntity<ArticlesResponseDto> getArticles() {
+    public ResponseEntity <List<ArticlesResponseDto>> getArticles() {
         List<ArticlesResponseDto> articlesResponseDtos = articlesServiceImpl.articlesRead();
-        return ResponseEntity.ok((ArticlesResponseDto) articlesResponseDtos);
+        return ResponseEntity.ok(articlesResponseDtos);
 
     }
     @GetMapping("/{article_id}")

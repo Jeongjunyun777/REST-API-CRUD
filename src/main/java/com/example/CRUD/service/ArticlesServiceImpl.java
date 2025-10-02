@@ -40,6 +40,7 @@ public class ArticlesServiceImpl implements ArticlesService {
     }
 
     @Override
+    @Transactional(readOnly = true)
     public ArticlesResponseDto getOne(Long id) {
         Optional<Articles> articles = articlesRepository.findById(id);
 
@@ -54,6 +55,7 @@ public class ArticlesServiceImpl implements ArticlesService {
     }
 
     @Override
+    @Transactional(readOnly = true)
     public List<ArticlesResponseDto> articlesRead() {
         return articlesRepository.findAll().stream()
                 .map(articles -> new ArticlesResponseDto(

@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: CRUD
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/CRUD?useSSL=false&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&characterEncoding=UTF-8
+    username: root
+    password: kou@197810as
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
